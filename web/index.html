@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sentiment Aspect Analysis</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+
+</head>
+<body>
+  <div class="container">
+    <div class="upload-container">
+      <h1>Upload .txt File</h1>
+      <input type="file" id="fileInput" accept=".txt" />
+      <button id="uploadBtn">Upload</button>
+      <p id="status">Waiting for upload...</p>
+    </div>
+    <div class="chart-container">
+      <canvas id="aspectChart"></canvas>
+    </div>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
