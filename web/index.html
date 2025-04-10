@@ -6,22 +6,37 @@
   <title>Sentiment Aspect Analysis</title>
   <link rel="stylesheet" href="style.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
 </head>
 <body>
   <div class="container">
     <div class="upload-container">
-      <h1>Upload .txt File</h1>
+      <h1>Upload or Speak</h1>
+
+      <!-- Upload File -->
       <input type="file" id="fileInput" accept=".txt" />
-      <button id="uploadBtn">Upload</button>
-      <p id="status">Waiting for upload...</p>
+      <button id="uploadBtn">Upload File</button>
+
+      <!-- Or use mic -->
+      <button id="micBtn">🎤 Speak</button>
+
+      <!-- Show converted speech -->
+      <textarea id="speechText" placeholder="Your speech will appear here..." rows="4" style="width: 100%; margin-top: 1rem;"></textarea>
+
+      <!-- Upload speech -->
+      <button id="uploadSpeechBtn">Upload Speech Text</button>
+
+      <!-- Status -->
+      <p id="status">Waiting for input...</p>
     </div>
+
+    <!-- Chart Output -->
     <div class="chart-container">
       <canvas id="aspectChart"></canvas>
     </div>
   </div>
 
+  <!-- Script Module -->
   <script type="module" src="script.js"></script>
 </body>
 </html>
