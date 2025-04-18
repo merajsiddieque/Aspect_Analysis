@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sentiment Aspect Analysis</title>
+  <title>Speech & Sentiment Analysis</title>
   <link rel="stylesheet" href="style.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
@@ -11,20 +11,15 @@
 <body>
   <div class="container">
     <div class="upload-container">
-      <h1>Upload or Speak</h1>
+      <h1>Upload Text or Speak</h1>
 
       <!-- Upload File -->
       <input type="file" id="fileInput" accept=".txt" />
       <button id="uploadBtn">Upload File</button>
 
-      <!-- Or use mic -->
-      <button id="micBtn">🎤 Speak</button>
-
-      <!-- Show converted speech -->
-      <textarea id="speechText" placeholder="Your speech will appear here..." rows="4" style="width: 100%; margin-top: 1rem;"></textarea>
-
-      <!-- Upload speech -->
-      <button id="uploadSpeechBtn">Upload Speech Text</button>
+      <!-- Record Button -->
+      <button id="recordBtn">🎙️ Start Recording</button>
+      <button id="sendAudioBtn" disabled>Upload Audio</button>
 
       <!-- Status -->
       <p id="status">Waiting for input...</p>
@@ -36,7 +31,6 @@
     </div>
   </div>
 
-  <!-- Script Module -->
   <script type="module" src="script.js"></script>
 </body>
 </html>
